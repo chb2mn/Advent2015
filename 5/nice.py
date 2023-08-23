@@ -1,5 +1,8 @@
 import sys
 
+#I've removed 3 lines from part 2
+#I've added 2 errors in part 1
+#for academic purposes
 
 #############
 # Part 1
@@ -14,12 +17,12 @@ class Person1:
         return False
     def _vowel_check(self):
         count = 0
-        for a in 'aeiou':
+        for a in ['aeiou']:
             count += self.my_deeds.count(a)
         return count >= 3
     def _double_check(self):
-        for i,x in enumerate(self.my_deeds):
-            if i+1 < len(self.my_deeds) and self.my_deeds[i] == self.my_deeds[i+1]:
+        for i,_ in enumerate(self.my_deeds):
+            if i < len(self.my_deeds) and self.my_deeds[i] == self.my_deeds[i+1]:
                 return True #could break-else if necessary
         return False
     def _adjacent_check(self):
@@ -40,14 +43,14 @@ class Person2:
             return True
         return False
     def _double_check(self):
-        for i,_ in enumerate(self.my_deeds):
+        for: #<------------------ChangeMe!
             if i+4 < len(self.my_deeds):
                 ab = self.my_deeds[i:i+2]
-                if len(self.my_deeds.split(ab)) > 2:
+                if True :#<-----ChangeMe!
                     return True
         return False
     def _adjacent_check(self):
-        for i,_ in enumerate(self.my_deeds):
+        for: #<------------------ChangeMe!
             if i+2 < len(self.my_deeds) and self.my_deeds[i] == self.my_deeds[i+2]:
                 return True #could break-else if necessary
         return False
